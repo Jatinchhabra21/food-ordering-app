@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./index.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/smythe" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="title">Jimmy’s Diner</h1>
+        <p class="subtitle">The best burgers and pizzas in town.</p>
+      </header>
+      <div id="menu-container"></div>
+      <div id="cart-container" class="cart-container">
+        <p>Your order</p>
+        <div class="cart-summary" id="cart-summary"></div>
+        <div class="cart-action">
+          <div class="price-wrapper">
+            <p>Total Price</p>
+            <p class="total-price" id="total-price">$26</p>
+          </div>
+          <button class="order" id="order">Complete order</button>
+        </div>
+      </div>
+    </main>
+    <div class="payment-modal" id="payment-modal">
+      <h1 class="payment-modal__title">Enter card details</h1>
+      <form>
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter your name"
+          id="payment-name"
+          required
+        />
+        <input
+          class="input"
+          type="number"
+          placeholder="Enter card number"
+          id="payment-card"
+          required
+        />
+        <input
+          class="input"
+          type="password"
+          placeholder="Enter cvv"
+          id="payment-cvv"
+          pattern="[0-9]*"
+          required
+        />
+        <button class="pay-btn" id="pay-btn">Pay</button>
+      </form>
+    </div>
+    <div class="thank-message" id="thank-message"></div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
